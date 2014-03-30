@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.gravitydevelopment.anticheat</groupId>
     <artifactId>AntiCheat-COMPAT</artifactId>
-    <version>2.0.3-COMPAT</version>
+    <version>2.0.3</version>
     <name>AntiCheat</name>
     <url>http://gravitydevelopment.net</url>
     <properties>
