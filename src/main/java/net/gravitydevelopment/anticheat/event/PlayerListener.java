@@ -76,26 +76,26 @@ public class PlayerListener extends EventListener {
         AntiCheat.getManager().addEvent(event.getEventName(), event.getHandlers().getRegisteredListeners());
     }
 
-    @EventHandler
-    public void onProjectileLaunch(ProjectileLaunchEvent event) {
-        if (event.getEntity().getShooter() instanceof Player) {
-            Player player = (Player) event.getEntity().getShooter();
-
-            if (event.getEntity() instanceof Arrow) {
-                return;
-            }
-
-            if (getCheckManager().willCheck(player, CheckType.FAST_PROJECTILE)) {
-                CheckResult result = getBackend().checkProjectile(player);
-                if (result.failed()) {
-                    event.setCancelled(!silentMode());
-                    log(result.getMessage(), player, CheckType.FAST_PROJECTILE);
-                }
-            }
-        }
-
-        AntiCheat.getManager().addEvent(event.getEventName(), event.getHandlers().getRegisteredListeners());
-    }
+//    @EventHandler
+//    public void onProjectileLaunch(ProjectileLaunchEvent event) {
+//        if (event.getEntity().getShooter() instanceof Player) {
+//            Player player = (Player) event.getEntity().getShooter();
+//
+//            if (event.getEntity() instanceof Arrow) {
+//                return;
+//            }
+//
+//            if (getCheckManager().willCheck(player, CheckType.FAST_PROJECTILE)) {
+//                CheckResult result = getBackend().checkProjectile(player);
+//                if (result.failed()) {
+//                    event.setCancelled(!silentMode());
+//                    log(result.getMessage(), player, CheckType.FAST_PROJECTILE);
+//                }
+//            }
+//        }
+//
+//        AntiCheat.getManager().addEvent(event.getEventName(), event.getHandlers().getRegisteredListeners());
+//    }
 
     @EventHandler
     public void onPlayerTeleport(PlayerTeleportEvent event) {
