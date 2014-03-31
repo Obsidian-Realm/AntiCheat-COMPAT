@@ -192,7 +192,7 @@ public enum BlockHardness {
     PISTON_EXTENSION(0.70D),
     PISTON_MOVING_PIECE(0.70D),
     PISTON_STICKY_BASE(0.70D),
-    x4089(3.00D);
+    BAUXITE_ORE(3.00D);
 
     Material mat;
     double hardness;
