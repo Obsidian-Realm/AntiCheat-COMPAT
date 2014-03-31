@@ -1,7 +1,7 @@
 author: Gravity
 description: AntiCheat helps easily identify and block malicious users on your server.
 main: net.gravitydevelopment.anticheat.AntiCheat
-name: AntiCheat
+name: AntiCheat-COMPAT
 softdepend: [ProtocolLib]
 startup: postworld
 url: http://gravitydevelopment.net
