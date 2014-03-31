@@ -23,6 +23,8 @@ import net.gravitydevelopment.anticheat.check.CheckType;
 import net.gravitydevelopment.anticheat.check.CheckResult;
 import net.gravitydevelopment.anticheat.util.Distance;
 import net.gravitydevelopment.anticheat.util.Utilities;
+
+import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -76,10 +78,12 @@ public class BlockListener extends EventListener {
             CheckResult result;
             if (getCheckManager().willCheck(player, CheckType.FAST_BREAK)) {
                 result = getBackend().checkFastBreak(player, block);
+                Bukkit.getLogger().info("Player " +player+ " broke block " + event.getBlock());
                 if (result.failed()) {
                     event.setCancelled(!silentMode());
                     log(result.getMessage(), player, CheckType.FAST_BREAK);
                     noHack = false;
+                    Bukkit.getLogger().info("Player " +player+ " broke block " + event.getBlock());
                 }
             }
             if (getCheckManager().willCheck(player, CheckType.NO_SWING)) {
