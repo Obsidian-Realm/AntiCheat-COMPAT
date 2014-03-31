@@ -4,7 +4,7 @@
     <groupId>net.gravitydevelopment.anticheat</groupId>
     <artifactId>AntiCheat-COMPAT</artifactId>
     <version>1.0.0</version>
-    <name>AntiCheat</name>
+    <name>AntiCheat-COMPAT</name>
     <url>http://gravitydevelopment.net</url>
     <properties>
         <project.build.version>${project.version}</project.build.version>
